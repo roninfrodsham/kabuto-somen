@@ -1,4 +1,6 @@
-function HelmetBack() {
+import type { HelmetVariantsProps } from '../types/'
+
+function HelmetBack({helmetVariants}: HelmetVariantsProps) {
   return (
     <path
       fill="#00582B"

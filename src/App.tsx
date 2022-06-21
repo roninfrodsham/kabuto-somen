@@ -6,6 +6,21 @@ import { MaskOne } from './components/maskone'
 
 function App() {
 
+  const helmetVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        type: "tween",
+        ease: "easeInOut",
+        when: "beforeChildren",
+      }
+    },
+  }
+
   return (
     <div className="App">
       <svg
@@ -14,7 +29,7 @@ function App() {
         viewBox="0 0 332.6 275.1"
         className="kabuto"
       >
-        <HelmetBack />
+        <HelmetBack helmetVariants={helmetVariants} />
         <MaskOne />
         <HelmetFront />
       </svg>
