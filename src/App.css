@@ -1,7 +1,23 @@
 .App {
-  margin: 2em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .kabuto {
   height: 30vmin;
+}
+
+button {
+  background-color: #00582B;
+  border: 0;
+  outline: 0;
+  color: #EEABCE;
+  padding: 10px 20px;
+  font-size: 21px;
+  margin-top: 10%;
+  font-family: 'Sawarabi Mincho', sans-serif;
+  cursor: pointer;
 }

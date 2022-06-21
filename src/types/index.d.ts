@@ -1,21 +1,28 @@
-type HelmetVariantsProps = {
-  helmetVariants : {
+type MaskVariantsProps = {
+  maskVariants : {
     hidden : {
-      opacity: number
+      opacity: number,
+      y: number,
     },
     visible: {
       opacity: number,
-      transition: {
+      y: number,
+      transition?: {
         duration?: number,
         type?: string,
+        stiffness?: number,
+        damping?: number,
         ease?: string,
         when?: string
         delay?: number,
         repeat?: number,
         times?: Array<number>
+      },
+      default?: {
+        duration?: number,
       }
     }
   }
 }
 
-export { HelmetVariantsProps }
+export { MaskVariantsProps }
