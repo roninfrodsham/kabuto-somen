@@ -36,7 +36,6 @@ function App() {
   }
 
   function getRandomMask() {
-    // filter out current mask so not selected again
     const filterKeys = keys.filter((key) => {
       return key !== currentMask
     })
