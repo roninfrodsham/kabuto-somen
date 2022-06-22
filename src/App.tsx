@@ -1,10 +1,9 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { HelmetBack } from './components/helmetback'
 import { HelmetFront } from './components/helmetfront'
-import { MaskOne } from './components/maskone'
-import { MaskTwo } from './components/masktwo'
+import { MaskOne, MaskTwo, MaskThree, MaskFour } from './components/masks'
 import './App.css'
-import { useState } from 'react'
 
 type ComponentProps = {
   [key: string]: any
@@ -14,11 +13,12 @@ function App() {
   const Components: ComponentProps = {
     "MaskOne": MaskOne,
     "MaskTwo": MaskTwo,
+    "MaskThree": MaskThree,
+    "MaskFour": MaskFour,
   }
   const keys = Object.keys(Components)
   const [currentMask, setMask] = useState("MaskOne")
   let Component = Components[currentMask];
-
 
   const helmetVariants = {
     hidden: {
@@ -35,7 +35,7 @@ function App() {
     },
   }
 
-  function switchMask() {
+  function getRandomMask() {
     // filter out current mask so not selected again
     const filterKeys = keys.filter((key) => {
       return key !== currentMask
@@ -77,13 +77,13 @@ function App() {
         <HelmetFront />
       </motion.svg>
       <motion.button
-        onClick={() => switchMask()}
+        onClick={() => getRandomMask()}
         whileHover={{
           scale: 1.2,
           textShadow: '0 0 10px #EEABCE',
         }}
       >
-        Switch Mask
+        Change Mask
       </motion.button>
     </div>
   )
