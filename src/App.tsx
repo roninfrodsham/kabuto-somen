@@ -40,6 +40,7 @@ function App() {
       return key !== currentMask
     })
     const prop = filterKeys[Math.floor(Math.random() * filterKeys.length)]
+    console.log("NEXT MASK: ", prop);
     setMask(prop);
   }
 
