@@ -41,6 +41,7 @@ function App() {
     })
     console.log("FILTER KEYS: ", filterKeys);
     const prop = filterKeys[Math.floor(Math.random() * filterKeys.length)]
+    console.log("NEXT MASK: ", prop);
     setMask(prop);
   }
 
