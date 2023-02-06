@@ -39,6 +39,7 @@ function App() {
     const filterKeys = keys.filter((key) => {
       return key !== currentMask
     })
+    console.log("FILTER KEYS: ", filterKeys);
     const prop = filterKeys[Math.floor(Math.random() * filterKeys.length)]
     setMask(prop);
   }
